@@ -3,9 +3,9 @@ import sqlite3
 import pickle
 import pandas as pd
 import numpy as np
-import google.generativeai as genai
 import os
 from dotenv import load_dotenv
+import google.generativeai as genai
 from datetime import datetime
 
 # ===========================
