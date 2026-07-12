@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>Result</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Recommendation Result</h1>
+
+<div class="card">
+
+<h2>Hello {{name}}</h2>
+
+<h3>
+
+Risk Level :
+
+<span class="risk">
+
+{{risk}}
+
+</span>
+
+</h3>
+
+<h3>
+
+Estimated Premium
+
+</h3>
+
+<h2>
+
+₹{{premium}}
+
+</h2>
+
+<h3>
+
+Machine Learning Prediction
+
+</h3>
+
+<p>
+
+{{prediction}}
+
+</p>
+
+<h3>
+
+Gemini AI Recommendation
+
+</h3>
+
+<div class="recommendation">
+
+{{recommendation}}
+
+</div>
+
+<br>
+
+<a href="/">New Prediction</a>
+
+|
+
+<a href="/history">
+
+History
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
