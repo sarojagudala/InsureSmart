@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>History</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+
+Recommendation History
+
+</h1>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Age</th>
+
+<th>Insurance</th>
+
+<th>Risk</th>
+
+<th>Premium</th>
+
+<th>Date</th>
+
+<th>Delete</th>
+
+</tr>
+
+{% for row in history %}
+
+<tr>
+
+<td>{{row.id}}</td>
+
+<td>{{row.name}}</td>
+
+<td>{{row.age}}</td>
+
+<td>{{row.insurance_type}}</td>
+
+<td>{{row.risk_level}}</td>
+
+<td>₹{{row.premium}}</td>
+
+<td>{{row.created_at}}</td>
+
+<td>
+
+<a href="/delete/{{row.id}}">
+
+Delete
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/clear">
+
+Clear History
+
+</a>
+
+|
+
+<a href="/">
+
+Home
+
+</a>
+
+</div>
+
+</body>
+
+</html>
